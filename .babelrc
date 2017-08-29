@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["es2015", { "modues": false }],
+    "react",
+    "stage-0",
+    "react-hmre" //пресет для правильной работы HotModuleReplacementPlugin
+  ]
+}
