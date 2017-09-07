@@ -1,8 +1,8 @@
-#React App - chat with WebSocket
+# React App - chat with WebSocket
 
 ## For start
 ```npm run start```
 
-###Applied 
+### Applied 
 HotModuleReplacement
 Redux
