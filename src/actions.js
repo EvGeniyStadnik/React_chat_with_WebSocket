@@ -9,3 +9,14 @@ export const addNewUser = () => {
     }
   )
 };
+
+export const addNewMessage = (author, text, datetime) => {
+  return (
+    {
+      type: 'ADD_NEW_MESSAGE',
+      author,
+      text,
+      datetime
+    }
+  )
+};

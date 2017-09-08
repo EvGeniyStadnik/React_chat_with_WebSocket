@@ -23,11 +23,22 @@ const usersReducer = (state = usersState, action) => {
   }
 };
 
-const messageReducer = (state = messagesState, action) => {
-  return state;
+const messagesReducer = (state = messagesState, action) => {
+  const { author, text, datetime} = action;
+  switch(action.type){
+    case 'ADD_NEW_MESSAGE':
+      return state.concat({
+        author,
+        text,
+        datetime
+      });
+    default:
+      return state;
+  }
+
 };
 
 export default combineReducers({
   usersReducer,
-  messageReducer
+  messagesReducer
 });
