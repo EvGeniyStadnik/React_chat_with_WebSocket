@@ -8,7 +8,7 @@ class Messages extends Component {
         {messages.map(m => {
           let d = new Date(m.datetime);
           return (
-            <p className="message">
+            <p key={m.datetime} className="message">
               <span className="message__date">{ `${d.getFullYear()}. ${d.getMonth()}. ${d.getDay()}. ${d.getHours()}. ${d.getMinutes()}` }</span>
               <span className="message__author">{ m.author }</span>
               <span>{ m.text }</span>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Messages from './Messages';
 import Users from './Users';
+import { addNewUser } from './actions';
 import './assets/styles/style.scss';
 
 class Chat extends Component {
@@ -24,7 +25,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    addNewUser: (username) => dispatch({ type: 'ADD_NEW_USER', username })
+    addNewUser: bindActionCreators(addNewUser, dispatch)
   }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Chat);
