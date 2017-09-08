@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import faker from 'faker';
 import Messages from './Messages';
 import Users from './Users';
 import './assets/styles/style.scss';
 
 class Chat extends Component {
   render() {
-    const rndUsername = `@${faker.internet.userName().toLowerCase()}`;
     console.log(this.props);
     return (
       <main className="main-wrapper">
-        <Messages />
-        <Users />
+        <Messages messages={this.props.messages} />
+        <Users users={this.props.users} addNewUser={this.props.addNewUser} />
       </main>
     );
   }
 }
 const mapStateToProps = (state) => {
   return {
-    users: state
+    users: state.usersReducer,
+    messages: state.messageReducer
   }
 };
 const mapDispatchToProps = (dispatch) => {

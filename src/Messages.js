@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 class Messages extends Component {
   render() {
+    const { messages } = this.props;
     return (
       <div className="chat">
-        <p className="message">
-          <span className="message__date">08.09.2017</span>
-          <span className="message__author">Vlad</span>
-          <span>Hello</span>
-        </p>
-        <p className="message">
-          <span className="message__date">08.09.2017</span>
-          <span className="message__author">Alex</span>
-          <span>Hello from Alex</span>
-        </p>
-
+        {messages.map(m => {
+          let d = new Date(m.datetime);
+          return (
+            <p className="message">
+              <span className="message__date">{ `${d.getFullYear()}. ${d.getMonth()}. ${d.getDay()}. ${d.getHours()}. ${d.getMinutes()}` }</span>
+              <span className="message__author">{ m.author }</span>
+              <span>{ m.text }</span>
+            </p>
+          )
+        })}
         <input type="text" className="chat__input" />
       </div>
     );
