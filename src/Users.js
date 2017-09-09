@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Users extends Component {
   render() {
-    const { users, addNewUser } = this.props;
+    const { users, connectNewUser } = this.props;
     return (
       <div className="users">
         <h3 className="users__title">Online users:</h3>
@@ -14,7 +14,7 @@ class Users extends Component {
             )
           })}
         </ul>
-        <button onClick={addNewUser}>
+        <button onClick={connectNewUser}>
           Add new user
         </button>
       </div>

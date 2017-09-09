@@ -3,16 +3,16 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Messages from './Messages';
 import Users from './Users';
-import { addNewUser, addNewMessage } from './actions';
+import { connectNewUser, addNewMessage } from './actions';
 import './assets/styles/style.scss';
 
 class Chat extends Component {
   render() {
-    console.log(this.props);
+    console.log('props in Chat component', this.props);
     return (
       <main className="main-wrapper">
         <Messages messages={this.props.messages} addNewMessage={this.props.addNewMessage} />
-        <Users users={this.props.users} addNewUser={this.props.addNewUser} />
+        <Users users={this.props.users} connectNewUser={this.props.connectNewUser} />
       </main>
     );
   }
@@ -25,7 +25,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    addNewUser: bindActionCreators(addNewUser, dispatch),
+    connectNewUser: bindActionCreators(connectNewUser, dispatch),
     addNewMessage: bindActionCreators(addNewMessage, dispatch)
   }
 };

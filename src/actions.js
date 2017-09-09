@@ -10,6 +10,14 @@ export const addNewUser = () => {
   )
 };
 
+export const connectNewUser = () => {
+  return (
+    {
+      type: 'CONNECTED_NEW_USER',
+    }
+  )
+};
+
 export const addNewMessage = (author, text, datetime) => {
   return (
     {
