@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {render} from 'react-dom';
-import App from './app';
+
+const testVar = null;
 
 render(
-  <App />,
+  <div>Hello!</div>,
   document.getElementById('app')
 );

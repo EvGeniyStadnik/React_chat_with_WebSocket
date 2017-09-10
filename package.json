@@ -1,11 +1,11 @@
 {
-  "name": "my-app",
+  "name": "react-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "chat",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --color"
+    "start": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.14.0",
     "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^6.9.0",
     "faker": "^4.1.0",
     "file-loader": "^0.9.0",
