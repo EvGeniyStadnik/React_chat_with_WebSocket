@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
 import Chat from './chat';
 import rootReducer from './reducers';
 import { addNewUser } from './actions';
@@ -24,7 +25,7 @@ const checkUserMiddleware = store => next => action => {
     let fakeRequest = () => new Promise(resolve => {
       setTimeout(() => {
         resolve()
-      }, 2500)
+      }, 1500)
     });
 
     fakeRequest().then(() => {
@@ -34,13 +35,12 @@ const checkUserMiddleware = store => next => action => {
   return next(action)
 };
 
-//-------------------------
-
 const store = createStore(
   rootReducer,
-  applyMiddleware(loggerMiddleware),
-  applyMiddleware(checkUserMiddleware)
+  applyMiddleware(reduxThunk, loggerMiddleware, checkUserMiddleware),
 );
+
+//-------------------------
 window.store = store;
 // store.subscribe(() => {
 //   console.log('store has been changed');

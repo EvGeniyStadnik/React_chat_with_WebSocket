@@ -2,12 +2,17 @@ import faker from 'faker';
 
 export const addNewUser = () => {
   const username = `@${faker.internet.userName().toLowerCase()}`;
-  return (
-    {
+  return dispatch => {
+    dispatch({
       type: 'ADD_NEW_USER',
       username
-    }
-  )
+    });
+    dispatch(addNewMessage(
+      username,
+      'Hello guys...',
+      Date.now()
+    ))
+  }
 };
 
 export const connectNewUser = () => {
