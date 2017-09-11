@@ -2,10 +2,11 @@
   "presets": [
     ["es2015", { "modues": false }],
     "react",
-    "stage-0",
-    "react-hmre" //пресет для правильной работы HotModuleReplacementPlugin
+    "stage-0"
   ],
   "plugins": [
-    "react-html-attrs"
+    "react-html-attrs",
+    "react-hot-loader/babel"
   ]
 }
+

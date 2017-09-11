@@ -6,6 +6,7 @@ const outputPath = path.resolve(__dirname, './dist');
 const webpackConfig = {
   entry: {
     app: [
+      'react-hot-loader/patch',
       path.resolve(__dirname, './src/index.js')
     ]
   },
