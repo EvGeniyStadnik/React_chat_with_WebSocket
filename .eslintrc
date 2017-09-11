@@ -2,8 +2,8 @@
   "extends": [
     //наследуемся от рекомендуемых правил
     "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+//    "plugin:import/errors",
+//    "plugin:import/warnings"
   ],
   "parser": "babel-eslint",
   //настройки окружения
@@ -21,7 +21,7 @@
   },
   "plugins": [
     "react",
-    "import"
+//    "import"
   ],
   "rules": {
     "no-debugger": 0,
@@ -31,7 +31,7 @@
     "no-use-before-define": 1,
     "no-undef": 1,
     "eol-last": 0,
-    "indent": [2, "tab"],
+    //"indent": [2, "tab"],
     "quotes": [2, "single", {"allowTemplateLiterals": true}],
     "no-unused-vars": 1,
     "comma-dangle": 0,

@@ -4,5 +4,8 @@
     "react",
     "stage-0",
     "react-hmre" //пресет для правильной работы HotModuleReplacementPlugin
+  ],
+  "plugins": [
+    "react-html-attrs"
   ]
 }

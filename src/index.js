@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-
-const testVar = null;
+import Chat from 'containers/Chat';
+import 'assets/styles/style.scss';
 
 render(
-  <div>Hello!</div>,
+  <Chat />,
   document.getElementById('app')
 );
