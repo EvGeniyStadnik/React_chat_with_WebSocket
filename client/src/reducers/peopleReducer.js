@@ -7,10 +7,10 @@ const initState = [
 
 const peopleReducer = (state = initState, action) => {
   switch(action.type){
-    case 'TYPE':
+    case 'ADD_NEW_USER':
       return [
         ...state,
-        ...action.people
+        'Alex ' + Date.now()
       ];
     default:
       return state;
