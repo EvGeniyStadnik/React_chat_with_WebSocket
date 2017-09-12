@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import 'assets/styles/style.scss';
+import ws from 'util/ws';
 
 import Chat from 'containers/Chat';
 
