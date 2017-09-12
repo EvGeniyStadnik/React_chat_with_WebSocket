@@ -4,6 +4,8 @@ import { AppContainer } from 'react-hot-loader';
 import 'assets/styles/style.scss';
 import ws from 'util/ws';
 
+window.ws = ws;
+
 import Chat from 'containers/Chat';
 
 const renderApp = Component => {
