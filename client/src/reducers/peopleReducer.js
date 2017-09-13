@@ -1,16 +1,9 @@
-const initState = [
-  '@Vitya',
-  '@Sasha',
-  '@Igor',
-  '@Yevgen',
-];
-
-const peopleReducer = (state = initState, action) => {
+const peopleReducer = (state = [], action) => {
   switch(action.type){
-    case 'ADD_NEW_USER':
+    case 'CONNECTED_NEW_USER':
       return [
         ...state,
-        'Alex ' + Date.now()
+        action.userName
       ];
     default:
       return state;

@@ -18,7 +18,7 @@ var userColor = false;
     if(!userName){
         userName = msg;
         userColor = colors.shift();
-        ws.send(JSON.stringify({ type:'color', data: userColor }));
+        ws.send(JSON.stringify({ type:'connected_new_user', data: userName }));
         console.log(userName + ' login');
     }else{
         console.log(userName + ' say: ' + msg);

@@ -4,10 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import 'assets/styles/style.scss';
 import ws from 'util/ws';
 
-window.ws = ws;
+localStorage.removeItem('auth');
 
-// import Chat from 'containers/Chat';
-import Example from 'containers/HocExample';
+import App from 'containers/App';
 
 const renderApp = Component => {
   render(
@@ -18,8 +17,8 @@ const renderApp = Component => {
   )
 };
 
-renderApp(Example);
+renderApp(App);
 
 if (module.hot) {
-  module.hot.accept(() => { renderApp(Example) })
+  module.hot.accept(() => { renderApp(App) })
 }
