@@ -6,7 +6,8 @@ import ws from 'util/ws';
 
 window.ws = ws;
 
-import Chat from 'containers/Chat';
+// import Chat from 'containers/Chat';
+import Example from 'containers/HocExample';
 
 const renderApp = Component => {
   render(
@@ -17,8 +18,8 @@ const renderApp = Component => {
   )
 };
 
-renderApp(Chat);
+renderApp(Example);
 
 if (module.hot) {
-  module.hot.accept(() => { renderApp(Chat) })
+  module.hot.accept(() => { renderApp(Example) })
 }

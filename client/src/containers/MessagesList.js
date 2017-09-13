@@ -6,25 +6,19 @@ class MessagesList extends Component {
       <div class="chat">
         <div
           class="chat-header clearfix">
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg"
-            alt="avatar"/>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar"/>
 
-          <div
-            class="chat-about">
-            <div
-              class="chat-with">
+          <div class="chat-about">
+            <div class="chat-with">
               Chat with
               Vincent Porter
             </div>
-            <div
-              class="chat-num-messages">
+            <div class="chat-num-messages">
               already 1 902
               messages
             </div>
           </div>
-          <i
-            class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
         </div>
 
         <div
@@ -32,14 +26,10 @@ class MessagesList extends Component {
           <ul>
             <li
               class="clearfix">
-              <div
-                class="message-data align-right">
-                <span
-                  class="message-data-time">10:10 AM, Today</span> &nbsp; &nbsp;
-                <span
-                  class="message-data-name">Olia</span>
-                <i
-                  class="fa fa-circle me"></i>
+              <div class="message-data align-right">
+                <span class="message-data-time">10:10 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name">Olia</span>
+                <i class="fa fa-circle me"></i>
 
               </div>
               <div
@@ -56,14 +46,10 @@ class MessagesList extends Component {
             <li>
               <div
                 class="message-data">
-                <span
-                  class="message-data-name"><i
-                  class="fa fa-circle online"></i> Vincent</span>
-                <span
-                  class="message-data-time">10:12 AM, Today</span>
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                <span class="message-data-time">10:12 AM, Today</span>
               </div>
-              <div
-                class="message my-message">
+              <div class="message my-message">
                 Are we
                 meeting
                 today?
@@ -78,14 +64,10 @@ class MessagesList extends Component {
 
             <li
               class="clearfix">
-              <div
-                class="message-data align-right">
-                <span
-                  class="message-data-time">10:14 AM, Today</span> &nbsp; &nbsp;
-                <span
-                  class="message-data-name">Olia</span>
-                <i
-                  class="fa fa-circle me"></i>
+              <div class="message-data align-right">
+                <span class="message-data-time">10:14 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name">Olia</span>
+                <i class="fa fa-circle me"></i>
 
               </div>
               <div
@@ -109,20 +91,15 @@ class MessagesList extends Component {
             <li>
               <div
                 class="message-data">
-                <span
-                  class="message-data-name"><i
-                  class="fa fa-circle online"></i> Vincent</span>
-                <span
-                  class="message-data-time">10:20 AM, Today</span>
+                <span class="message-data-name">
+                  <i class="fa fa-circle online">
+                  </i> Vincent</span>
+                <span class="message-data-time">10:20 AM, Today</span>
               </div>
               <div
                 class="message my-message">
-                Actually
-                everything
-                was fine.
-                I'm very
-                excited to
-                show this to
+                Actuallyeverything was fine.
+                I'm very excited to show this to
                 our team.
               </div>
             </li>
@@ -130,38 +107,23 @@ class MessagesList extends Component {
             <li>
               <div
                 class="message-data">
-                <span
-                  class="message-data-name"><i
-                  class="fa fa-circle online"></i> Vincent</span>
-                <span
-                  class="message-data-time">10:31 AM, Today</span>
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                <span class="message-data-time">10:31 AM, Today</span>
               </div>
-              <i
-                class="fa fa-circle online"></i>
-              <i
-                class="fa fa-circle online"
-                style={{color: '#AED2A6'}}></i>
-              <i
-                class="fa fa-circle online"
-                style={{color: '#DAE9DA'}}></i>
+              <i class="fa fa-circle online"></i>
+              <i class="fa fa-circle online" style={{color: '#AED2A6'}}></i>
+              <i class="fa fa-circle online" style={{color: '#DAE9DA'}}></i>
             </li>
 
           </ul>
 
         </div>
 
-        <div
-          class="chat-message clearfix">
-          <textarea
-            name="message-to-send"
-            id="message-to-send"
-            placeholder="Type your message"
-            rows="3"></textarea>
+        <div class="chat-message clearfix">
+          <textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
 
-          <i
-            class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
-          <i
-            class="fa fa-file-image-o"></i>
+          <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+          <i class="fa fa-file-image-o"></i>
 
           <button>Send
           </button>
