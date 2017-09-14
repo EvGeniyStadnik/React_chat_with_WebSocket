@@ -8,7 +8,10 @@ const peopleReducer = (state = [], action) => {
           data: action.userName
         }
       ];
-      break;
+    case 'DISCONNECTED_USER':
+      return state.filter(u => {
+        return u.id !== action.userID
+      });
     default:
       return state;
   }

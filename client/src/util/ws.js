@@ -1,4 +1,4 @@
-import { connectedNewUser } from 'actions';
+import { connectedNewUser, disconnectedUser } from 'actions';
 import store from 'store'
 
 export default ((wsUrl) => {
@@ -17,7 +17,11 @@ export default ((wsUrl) => {
       case 'connected_new_user':
         const { data, userID } = messageObj;
         dispatch(connectedNewUser(data, userID));
-        break
+        break;
+      case 'disconnected_user':
+        dispatch(disconnectedUser(messageObj.userID));
+        break;
+
     }
     console.log(message.data);
   };

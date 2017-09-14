@@ -5,3 +5,10 @@ export const connectedNewUser = (userName, userID) => {
     userID
   }
 };
+
+export const disconnectedUser = (userID) => {
+  return {
+    type: 'DISCONNECTED_USER',
+    userID
+  }
+};

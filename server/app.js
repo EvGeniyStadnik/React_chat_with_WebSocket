@@ -41,7 +41,13 @@ var userColor = false;
   clients.splice(index, 1);
   if(userName !== false && userColor != false){
     colors.push(userColor);
-  }  
+  }
+
+  var json = JSON.stringify({type:'disconnected_user', userID: ws.userID});
+  for (var i=0; i < clients.length; i++) {
+    clients[i].send(json);
+  }
+
   });
   
 });
