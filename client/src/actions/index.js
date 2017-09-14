@@ -1,6 +1,7 @@
-export const connectedNewUser = userName => {
+export const connectedNewUser = (userName, userID) => {
   return {
     type: 'CONNECTED_NEW_USER',
-    userName
+    userName,
+    userID
   }
 };

@@ -3,8 +3,12 @@ const peopleReducer = (state = [], action) => {
     case 'CONNECTED_NEW_USER':
       return [
         ...state,
-        action.userName
+        {
+          id: action.userID,
+          data: action.userName
+        }
       ];
+      break;
     default:
       return state;
   }

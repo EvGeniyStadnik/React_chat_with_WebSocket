@@ -11,14 +11,16 @@ colors.sort(function(a,b) { return Math.random() > 0.5; } );
 var clients = [];
 
 wss.on('connection', function(ws){
-clients.push(ws);
+clients.push(Object.assign(ws, { userID: Date.now() }));
 var userName = false;
 var userColor = false;
   ws.on('message', function(msg){
     if(!userName){
         userName = msg;
         userColor = colors.shift();
-        ws.send(JSON.stringify({ type:'connected_new_user', data: userName }));
+        for (var i=0; i < clients.length; i++) {
+          clients[i].send(JSON.stringify({ type:'connected_new_user', userID: ws.userID, data: userName }));
+        }
         console.log(userName + ' login');
     }else{
         console.log(userName + ' say: ' + msg);

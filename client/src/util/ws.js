@@ -15,7 +15,8 @@ export default ((wsUrl) => {
     console.log('ws.onmessage', message);
     switch(messageObj.type){
       case 'connected_new_user':
-        dispatch(connectedNewUser(messageObj.data));
+        const { data, userID } = messageObj;
+        dispatch(connectedNewUser(data, userID));
         break
     }
     console.log(message.data);
