@@ -5,7 +5,7 @@ const peopleReducer = (state = [], action) => {
         ...state,
         {
           id: action.userID,
-          data: action.userName
+          userName: action.userName
         }
       ];
     case 'DISCONNECTED_USER':

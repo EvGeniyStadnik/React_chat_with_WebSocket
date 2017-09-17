@@ -19,7 +19,7 @@ var userColor = false;
         userName = msg;
         userColor = colors.shift();
         for (var i=0; i < clients.length; i++) {
-          clients[i].send(JSON.stringify({ type:'connected_new_user', userID: ws.userID, data: userName }));
+          clients[i].send(JSON.stringify({ type:'connected_new_user', userID: ws.userID, userName }));
         }
         console.log(userName + ' login');
     }else{

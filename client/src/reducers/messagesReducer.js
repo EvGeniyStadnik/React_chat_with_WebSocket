@@ -1,11 +1,16 @@
 
-const messageReducer = (state = {}, action) => {
+const messageReducer = (state = [], action) => {
   switch(action.type){
-    case 'TYPE':
-      return {
+    case 'RECEIVE_NEW_MESSAGE':
+      return [
         ...state,
-        name: action.name
-      };
+        {
+          author: action.author,
+          text: action.text,
+          time: action.time,
+          color: action.color,
+        },
+      ];
     default:
       return state;
   }

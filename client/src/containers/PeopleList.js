@@ -11,11 +11,10 @@ class MessagesList extends Component {
       <div
         class="people-list"
         id="people-list">
-        {/*<PeopleSearch />*/}
         <ul class="list">
           {people.map(user => {
             return(
-              <UserItem key={user.id} userName={user.data}/>
+              <UserItem key={user.id} userName={user.userName}/>
             )
           })}
         </ul>
