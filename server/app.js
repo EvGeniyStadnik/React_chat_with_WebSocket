@@ -15,6 +15,7 @@ clients.push(Object.assign(ws, { userID: Date.now() }));
 var userName = false;
 var userColor = false;
   ws.on('message', function(msg){
+    console.log("ws.on('message' ", msg);
     if(!userName){
         userName = msg;
         userColor = colors.shift();

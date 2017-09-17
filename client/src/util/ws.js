@@ -39,6 +39,7 @@ export default ((wsUrl) => {
       }, 500);
       return
     }
+    console.log("ws.send(message); ", message);
     ws.send(message);
     countRecconnect = 0;
   };
